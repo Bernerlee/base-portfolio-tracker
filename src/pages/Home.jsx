@@ -10,6 +10,7 @@ const Home = () => {
         <p>Connect your wallet to view your Base assets.</p>
       </div>
       <WalletConnect />
+      <BalanceCard />
     </>
   );
 };
