@@ -1,4 +1,5 @@
 import Navbar from "../components/NavBar";
+import WalletConnect from "../components/WalletConnect";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
         <h3>Welcome 👋</h3>
         <p>Connect your wallet to view your Base assets.</p>
       </div>
+      <WalletConnect />
     </>
   );
 };
