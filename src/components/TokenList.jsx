@@ -1,15 +1,16 @@
+import { useTokens } from "../hooks/useTokens";
+
 const TokenList = () => {
-  const tokens = [
-    { name: "USDC", balance: "120" },
-    { name: "DAI", balance: "50" },
-  ];
+  const { tokens, loading } = useTokens();
+
+  if (loading) return <p>Loading tokens...</p>;
 
   return (
     <div>
       <h3>Tokens</h3>
-      {tokens.map((token, i) => (
+      {tokens.slice(0, 10).map((token, i) => (
         <p key={i}>
-          {token.name}: {token.balance}
+          {token.contractAddress} — {token.tokenBalance}
         </p>
       ))}
     </div>
