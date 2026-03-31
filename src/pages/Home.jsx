@@ -1,5 +1,6 @@
 import Navbar from "../components/NavBar";
 import WalletConnect from "../components/WalletConnect";
+import BalanceCard from "../components/BalanceCard";
 
 const Home = () => {
   return (
