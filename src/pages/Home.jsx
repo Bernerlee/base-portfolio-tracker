@@ -30,4 +30,17 @@ const Home = () => {
   );
 };
 
+const styles = {
+  page: {
+    backgroundColor: "#0f172a",
+    minHeight: "100vh",
+    color: "#fff",
+  },
+  container: {
+    maxWidth: "900px",
+    margin: "0 auto",
+    padding: "2rem",
+  },
+};
+
 export default Home;
