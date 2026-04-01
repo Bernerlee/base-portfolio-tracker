@@ -18,6 +18,7 @@ export const getTransactions = async (address) => {
           category: ["external", "erc20", "erc721"],
           maxCount: "0x10", // 16 txs
           order: "desc",
+          withMetadata: true,
         },
       ],
       id: 1,

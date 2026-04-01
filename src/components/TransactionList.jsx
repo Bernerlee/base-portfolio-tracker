@@ -25,6 +25,10 @@ const TransactionList = () => {
           <p>
             <strong>Value:</strong> {tx.value}
           </p>
+          <p>
+            <strong>Time:</strong>{" "}
+            {new Date(tx.metadata.blockTimestamp).toLocaleString()}
+          </p>
           <hr />
         </div>
       ))}
