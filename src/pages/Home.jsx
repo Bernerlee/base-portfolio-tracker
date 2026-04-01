@@ -41,6 +41,18 @@ const styles = {
     margin: "0 auto",
     padding: "2rem",
   },
+  header: {
+    marginBottom: "2rem",
+    padding: "1.5rem",
+    backgroundColor: "#1e293b",
+    borderRadius: "12px",
+  },
+  section: {
+    marginBottom: "2rem",
+    padding: "1.5rem",
+    backgroundColor: "#1e293b",
+    borderRadius: "12px",
+  },
 };
 
 export default Home;
