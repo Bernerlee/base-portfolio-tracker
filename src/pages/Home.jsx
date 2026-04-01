@@ -1,6 +1,7 @@
 import Navbar from "../components/NavBar";
 import WalletConnect from "../components/WalletConnect";
 import BalanceCard from "../components/BalanceCard";
+import TransactionList from "../components/TransactionList";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       </div>
       <WalletConnect />
       <BalanceCard />
+      <TransactionList />
     </>
   );
 };
