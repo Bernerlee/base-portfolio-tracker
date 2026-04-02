@@ -22,6 +22,12 @@ const WalletConnect = () => {
         >
           Disconnect
         </button>
+        <button
+          onClick={copyAddress}
+          className="bg-slate-700 px-3 py-1 rounded-lg text-sm"
+        >
+          Copy
+        </button>
       </div>
     );
   }
