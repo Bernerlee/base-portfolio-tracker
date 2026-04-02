@@ -3,35 +3,36 @@ import { useTransactions } from "../hooks/useTransactions";
 const TransactionList = () => {
   const { txs, loading } = useTransactions();
 
-  if (loading) return <p>Loading transactions...</p>;
-
   return (
     <div>
-      <h3>Recent Transactions</h3>
+      <h3 className="text-lg font-semibold mb-4">Recent Transactions</h3>
 
-      {txs.length === 0 && <p>No transactions found.</p>}
+      {loading && <p className="text-gray-400">Loading...</p>}
 
-      {txs.map((tx, i) => (
-        <div key={i} style={{ marginBottom: "1rem" }}>
-          <p>
-            <strong>From:</strong> {tx.from}
-          </p>
-          <p>
-            <strong>To:</strong> {tx.to}
-          </p>
-          <p>
-            <strong>Asset:</strong> {tx.asset}
-          </p>
-          <p>
-            <strong>Value:</strong> {tx.value}
-          </p>
-          <p>
-            <strong>Time:</strong>{" "}
-            {new Date(tx.metadata.blockTimestamp).toLocaleString()}
-          </p>
-          <hr />
-        </div>
-      ))}
+      <div className="space-y-4">
+        {txs.map((tx, i) => (
+          <div
+            key={i}
+            className="p-4 bg-slate-800 rounded-xl border border-slate-700"
+          >
+            <p className="text-sm text-gray-400">
+              {tx.from.slice(0, 6)}... → {tx.to?.slice(0, 6)}...
+            </p>
+
+            <p className="font-semibold">
+              {tx.value} {tx.asset}
+            </p>
+
+            <a
+              href={`https://basescan.org/tx/${tx.hash}`}
+              target="_blank"
+              className="text-blue-400 text-sm"
+            >
+              View on BaseScan
+            </a>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
