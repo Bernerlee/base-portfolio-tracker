@@ -5,6 +5,11 @@ const WalletConnect = () => {
   const { connect, connectors } = useConnect();
   const { disconnect } = useDisconnect();
 
+  const copyAddress = () => {
+    navigator.clipboard.writeText(address);
+    alert("Address copied!");
+  };
+
   if (isConnected) {
     return (
       <div className="flex items-center gap-3">
