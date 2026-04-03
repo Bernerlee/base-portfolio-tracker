@@ -14,7 +14,9 @@ export const useTokens = () => {
       setLoading(true);
       try {
         const data = await getTokenBalances(address);
-        setTokens(data);
+        const filtered = data.filter((token) => token.tokenBalance !== "0x0");
+
+        setTokens(filtered);
       } catch (err) {
         console.error(err);
       } finally {
