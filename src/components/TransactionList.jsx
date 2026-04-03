@@ -27,6 +27,9 @@ const TransactionList = () => {
       {loading && <p className="text-gray-400">Loading...</p>}
 
       <div className="space-y-4">
+        {!loading && txs.length === 0 && (
+          <p className="text-gray-400">No transactions yet</p>
+        )}
         {txs.map((tx, i) => {
           const isReceived = tx.to?.toLowerCase() === address?.toLowerCase();
 
