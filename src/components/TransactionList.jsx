@@ -22,7 +22,9 @@ const TransactionList = () => {
 
   return (
     <div>
-      <h3 className="text-lg font-semibold mb-4">Recent Transactions</h3>
+      <h3 className="text-lg font-semibold mb-4">
+        Recent Transactions ({txs.length})
+      </h3>
 
       {loading && <p className="text-gray-400">Loading...</p>}
       {error && <p className="text-red-400">{error}</p>}
