@@ -6,6 +6,7 @@ export const useTransactions = () => {
   const { address } = useAccount();
   const [txs, setTxs] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     if (!address) return;
@@ -17,6 +18,7 @@ export const useTransactions = () => {
         setTxs(data);
       } catch (err) {
         console.error(err);
+        setError("Failed to fetch transactions");
       } finally {
         setLoading(false);
       }
@@ -25,5 +27,5 @@ export const useTransactions = () => {
     fetchTxs();
   }, [address]);
 
-  return { txs, loading };
+  return { txs, loading, error };
 };
