@@ -6,6 +6,7 @@ export const useTokens = () => {
   const { address } = useAccount();
   const [tokens, setTokens] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     if (!address) return;
@@ -19,6 +20,7 @@ export const useTokens = () => {
         setTokens(filtered);
       } catch (err) {
         console.error(err);
+        setError("Fail to fetch tokens");
       } finally {
         setLoading(false);
       }
@@ -27,5 +29,5 @@ export const useTokens = () => {
     fetchTokens();
   }, [address]);
 
-  return { tokens, loading };
+  return { tokens, loading, error };
 };
