@@ -2,7 +2,7 @@ import { useTransactions } from "../hooks/useTransactions";
 import { useAccount } from "wagmi";
 
 const TransactionList = () => {
-  const { txs, loading } = useTransactions();
+  const { txs, loading, error } = useTransactions();
   const { address } = useAccount();
 
   const timeAgo = (timestamp) => {
@@ -25,6 +25,7 @@ const TransactionList = () => {
       <h3 className="text-lg font-semibold mb-4">Recent Transactions</h3>
 
       {loading && <p className="text-gray-400">Loading...</p>}
+      {error && <p className="text-red-400">{error}</p>}
 
       <div className="space-y-4">
         {!loading && txs.length === 0 && (
