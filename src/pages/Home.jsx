@@ -1,9 +1,14 @@
+import { useEffect } from "react";
+
 import Navbar from "../components/NavBar";
 import WalletConnect from "../components/WalletConnect";
 import BalanceCard from "../components/BalanceCard";
 import TransactionList from "../components/TransactionList";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "Base Portfolio Tracker";
+  }, []);
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <Navbar />
