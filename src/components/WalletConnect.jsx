@@ -3,7 +3,7 @@ import { formatAddress } from "../utils/format";
 
 const WalletConnect = () => {
   const { address, isConnected } = useAccount();
-  const { connect, connectors } = useConnect();
+  const { connect, connectors, isLoading } = useConnect();
   const { disconnect } = useDisconnect();
 
   const copyAddress = () => {
@@ -33,10 +33,10 @@ const WalletConnect = () => {
 
   return (
     <button
-      onClick={() => connect({ connector: connectors[0] })}
+      disabled={isLoading}
       className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-xl font-medium"
     >
-      Connect Wallet
+      {isLoading ? "Connecting..." : "Connect Wallet"}
     </button>
   );
 };
