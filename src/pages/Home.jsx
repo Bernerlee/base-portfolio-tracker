@@ -30,11 +30,13 @@ const Home = () => {
         <div className="grid md:grid-cols-3 gap-6">
           {/* Balance */}
           <div className="md:col-span-1 bg-slate-900 p-6 rounded-2xl border border-slate-800">
+            <h3 className="text-xl font-semibold mb-2">Overview</h3>
             <BalanceCard />
           </div>
 
           {/* Transactions */}
           <div className="md:col-span-2 bg-slate-900 p-6 rounded-2xl border border-slate-800">
+            <h3 className="text-xl font-semibold mb-2">Activity</h3>
             <TransactionList />
           </div>
         </div>
