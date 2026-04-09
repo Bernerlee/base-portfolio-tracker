@@ -41,6 +41,10 @@ const Home = () => {
           </div>
         </div>
       </main>
+
+      <footer className="text-center text-gray-500 py-6 text-sm">
+        Built on Base • Web3 Portfolio Tracker
+      </footer>
     </div>
   );
 };
