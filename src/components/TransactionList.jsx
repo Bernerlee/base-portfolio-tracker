@@ -39,7 +39,7 @@ const TransactionList = () => {
           return (
             <div
               key={i}
-              className="p-4 bg-slate-800 rounded-xl border border-slate-700"
+              className="p-4 bg-slate-800 rounded-xl border border-slate-700 hover:bg-slate-700 transition"
             >
               <p className="text-xs text-gray-400">
                 {isReceived ? "Received" : "Sent"}
