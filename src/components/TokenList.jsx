@@ -6,7 +6,7 @@ const TokenList = () => {
   if (loading) return <p>Loading tokens...</p>;
 
   return (
-    <div>
+    <div className="space-y-2">
       <h3 className="text-xl font-semibold mb-2">Tokens</h3>
       {tokens.slice(0, 10).map((token, i) => (
         <p key={i}>
