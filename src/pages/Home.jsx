@@ -41,6 +41,7 @@ const Home = () => {
           </div>
         </div>
       </main>
+      <div className="border-t border-slate-800 my-4"></div>
 
       <footer className="text-center text-gray-500 py-6 text-sm">
         Built on Base • Web3 Portfolio Tracker
