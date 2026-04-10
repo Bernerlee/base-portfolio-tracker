@@ -44,7 +44,7 @@ const TransactionList = () => {
             >
               <button
                 onClick={() => window.location.reload()}
-                className="mb-3 bg-slate-700 px-3 py-1 rounded-lg text-sm"
+                className="mb-3 bg-slate-700 hover:bg-slate-600 transition px-3 py-1 rounded-lg text-sm"
               >
                 Refresh
               </button>
