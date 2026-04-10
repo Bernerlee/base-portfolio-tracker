@@ -1,7 +1,9 @@
 const Navbar = () => {
   return (
     <nav style={{ padding: "1rem", borderBottom: "1px solid #eee" }}>
-      <h2>Base Portfolio Tracker</h2>
+      <h1 className="text-xl font-bold text-white">
+        Base Portfolio Tracker 🚀
+      </h1>
     </nav>
   );
 };
