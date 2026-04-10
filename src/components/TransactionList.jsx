@@ -33,6 +33,7 @@ const TransactionList = () => {
         {!loading && txs.length === 0 && (
           <p className="text-gray-400">No transactions yet</p>
         )}
+
         {txs.map((tx, i) => {
           const isReceived = tx.to?.toLowerCase() === address?.toLowerCase();
 
@@ -41,6 +42,12 @@ const TransactionList = () => {
               key={i}
               className="p-4 bg-slate-800 rounded-xl border border-slate-700 hover:bg-slate-700 transition"
             >
+              <button
+                onClick={() => window.location.reload()}
+                className="mb-3 bg-slate-700 px-3 py-1 rounded-lg text-sm"
+              >
+                Refresh
+              </button>
               <p className="text-xs text-gray-400">
                 {isReceived ? "Received" : "Sent"}
               </p>
