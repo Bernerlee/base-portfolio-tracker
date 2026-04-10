@@ -7,7 +7,7 @@ const TokenList = () => {
 
   return (
     <div>
-      <h3>Tokens</h3>
+      <h3 className="text-xl font-semibold mb-2">Tokens</h3>
       {tokens.slice(0, 10).map((token, i) => (
         <p key={i}>
           {token.contractAddress} — {token.tokenBalance}
